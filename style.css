@@ -157,7 +157,7 @@ a {
 }
 .scroll-down::after {
   content: "";
-  height: 100px;
+  height: 115px;
   width: 2px;
   background-color: #39b54a;
   top: 4px;
