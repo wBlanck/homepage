@@ -130,9 +130,23 @@ a {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  position: relative;
 }
 .social i {
   font-size: 0.8rem;
+}
+.social span {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  position: absolute;
+  right: 150%;
+  transform: scale(0);
+  transform-origin: right center;
+}
+.social:hover > span {
+  transform: scale(1);
+  transition: transform 1s;
 }
 .scroll-down {
   position: absolute;
