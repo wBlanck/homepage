@@ -124,8 +124,14 @@ ul {
   align-items: center;
   gap: 15px;
 }
+
 .social-links li i {
   color: rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+}
+.social-links li:hover > i {
+  color: white;
+  transition: 0.5s;
 }
 
 .main {
