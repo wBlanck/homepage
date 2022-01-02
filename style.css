@@ -31,6 +31,17 @@ ul {
   max-width: 1200px;
   margin-inline: auto;
 }
+@media screen and (max-width: 1500px) {
+  .container {
+    padding: 0 5%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .container {
+    padding: 0 8%;
+  }
+}
+
 .green {
   color: #39b54a;
 }
@@ -156,13 +167,43 @@ ul {
   margin-bottom: 10px;
 }
 .title {
-  font-size: 3.8rem;
-  max-width: 800px;
-  line-height: 1.4;
+  font-size: clamp(1.8rem, 5vw, 3.8rem);
+  /* max-width: 800px; */
+  line-height: 1.3;
   margin-bottom: 5.5rem;
+}
+@media screen and (max-width: 500px) {
+  .title,
+  .subtitle {
+    text-align: center;
+  }
+  .title > br {
+    display: none;
+  }
 }
 .hero__buttons {
   display: flex;
+}
+@media screen and (max-width: 700px) {
+  .hero__buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .hero__buttons > * {
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hero__buttons {
+    display: block;
+  }
+  .hero__buttons > * {
+    max-width: 100%;
+    width: 100%;
+  }
+  .btn:first-child {
+    margin-bottom: 15px;
+  }
 }
 .btn {
   background: none;
@@ -174,6 +215,13 @@ ul {
   border: 2px solid white;
   cursor: pointer;
   letter-spacing: 2px;
+}
+@media screen and (max-width: 700px) {
+  .btn {
+    padding: 14px 38px;
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
 }
 .btn:hover {
   background: white;
@@ -192,6 +240,11 @@ ul {
   flex-direction: column;
   gap: 20px;
 }
+@media screen and (max-width: 500px) {
+  .socials {
+    display: none;
+  }
+}
 .social {
   height: 35px;
   width: 35px;
@@ -203,8 +256,20 @@ ul {
   cursor: pointer;
   position: relative;
 }
+
 .social i {
   font-size: 0.8rem;
+}
+@media screen and (max-width: 700px) {
+  .socials {
+    right: 20px;
+  }
+  .social {
+    border: none;
+  }
+  .social i {
+    font-size: 0.7rem;
+  }
 }
 .social span {
   font-size: 0.7rem;
@@ -226,6 +291,17 @@ ul {
   right: 85px;
   bottom: 100px;
 }
+@media screen and (max-width: 900px) {
+  .scroll-down {
+    bottom: 50px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .scroll-down {
+    bottom: 25px;
+    right: 10px;
+  }
+}
 .scroll-down::after {
   content: "";
   height: 115px;
@@ -235,10 +311,20 @@ ul {
   right: -20px;
   position: absolute;
 }
+@media screen and (max-width: 500px) {
+  .scroll-down::after {
+    display: none;
+  }
+}
 .scroll-down span {
   font-size: 0.8rem;
   font-weight: bold;
   letter-spacing: 2px;
+}
+@media screen and (max-width: 500px) {
+  .scroll-down span {
+    font-size: 0.5rem;
+  }
 }
 .scroll-down i {
   margin-right: 15px;
