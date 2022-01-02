@@ -28,18 +28,8 @@ ul {
   list-style: none;
 }
 .container {
-  max-width: 1200px;
+  width: clamp(16rem, 90vw, 75rem);
   margin-inline: auto;
-}
-@media screen and (max-width: 1500px) {
-  .container {
-    padding: 0 5%;
-  }
-}
-@media screen and (max-width: 900px) {
-  .container {
-    padding: 0 8%;
-  }
 }
 
 .green {
@@ -157,7 +147,6 @@ ul {
   align-items: center;
 }
 .hero-content {
-  width: 100%;
 }
 .subtitle {
   color: rgba(255, 255, 255, 0.5);
